@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MesosCoordinator" default="build-war" basedir=".">
+	<property environment="env"/>
+	<property name="projname" value="MesosCoordinator"/>
+	<property name="src.class" value="${basedir}/build/classes"/>
+	<property name="web.dir" value="${basedir}/WebContent/"/>
+	<property name="tomcat" value="/home/wenzhao/data/software/apache-tomcat-8.5.15/webapps"/>
+
+
+	<target name="build-war">
+		<war destfile="${projname}.war" webxml="${web.dir}/WEB-INF/web.xml">
+			<lib dir="${web.dir}/WEB-INF/lib"/>
+			<classes dir="${src.class}/">
+				<exclude name = "org/renci/client/*"/>
+			</classes>
+		</war>
+		
+		<copy file="${projname}.war" todir="${tomcat}"/>
+		<delete file="${projname}.war"/>
+	</target>
+</project>
