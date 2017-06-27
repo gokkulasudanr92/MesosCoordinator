@@ -54,3 +54,8 @@ public class ClientTest {
         return UriBuilder.fromUri( "http://165.124.159.8:8080/MesosCoordinator" ).build();
     }
 }
+
+/* curl  usage cases:
+	GET with JSON: curl  http://165.124.159.8:8080/MesosCoordinator/api
+	
+ */
