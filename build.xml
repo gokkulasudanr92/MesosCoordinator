@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: two points need to be update when building on a different env: basedir & tomcat -->
 <project name="MesosCoordinator" default="build-deploy" basedir=".">
 	<property environment="env"/>
 	<property name="projname" value="MesosCoordinator"/>
@@ -6,7 +7,6 @@
 	<property name="src.class" value="${basedir}/build/classes"/>
 	<property name="web.dir" value="${basedir}/WebContent/"/>
 	<property name="tomcat" value="/home/wenzhao/data/software/apache-tomcat-8.5.15/webapps"/>
-	<!-- <property name="classpath" value="${basedir}/WebContent/WEB-INF/lib"/> -->
 	
     <path id="classpath">
         <pathelement location="${basedir}/WebContent/WEB-INF/lib/aopalliance-repackaged-2.5.0-b36.jar"/>
